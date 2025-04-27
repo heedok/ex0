@@ -12,7 +12,7 @@ while True:
 
     # 얼굴 감지
     faces = face_cascade.detectMultiScale(gray_image, scaleFactor=1.1, minNeighbors=5, minSize=(40, 40))
-    eyes = eye_cascade.detectMultiScale(gray_image, scaleFactor=1.1, minNeighbors=5, minSize=(50, 50), maxSize=(150, 150))
+    eyes = eye_cascade.detectMultiScale(gray_image, scaleFactor=1.1, minNeighbors=5, minSize=(10, 10), maxSize=(50, 50))
 
     # 감지된 얼굴에 사각형 그리기
     for (x, y, w, h) in faces:
