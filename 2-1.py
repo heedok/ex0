@@ -18,9 +18,9 @@ while True:
     
     
     # 눈 찾기
-    roi_color = frame[y:y + h, x:x + w]
     eyes = eye_cascade.detectMultiScale(gray_image, scaleFactor=1.1, minNeighbors=5, minSize=(50, 50), maxSize=(150, 150))
     #눈 네모 그리기
+    roi_color = frame[y:y + h, x:x + w]
     for (ex, ey, ew, eh) in eyes:
         cv2.rectangle(frame, (ex, ey), (ex+ew, ey+eh), (0, 255, 0), 2)
         
